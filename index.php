@@ -19,6 +19,7 @@ $messages = fetch_all($query);
 $_SESSION['errors'] = "";
 }
 ?>
+<a href="logout.php">Log Out</a>
 <h3>Add a new message</h3>
 <form action = "process.php" method = "post">
 	<input type="hidden" name="action" value = "post_message">

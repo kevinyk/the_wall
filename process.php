@@ -13,12 +13,12 @@ if(isset($_POST['action']) && $_POST['action'] == "register")
 		}
 		else
 		{
-			$_SESSION['errors'] = "Incorrect registration data, try again.";
+			$_SESSION['login_errors'] = "Incorrect registration data, try again.";
 			header("Location: login.php");
 		}
 	}
 	else{
-		$_SESSION['errors'] = "Incorrect registration data, try again.";
+		$_SESSION['login_errors'] = "Incorrect registration data, try again.";
 			header("Location: login.php");
 	}
 }
@@ -34,13 +34,13 @@ elseif (isset($_POST['action']) && $_POST['action'] == "login")
 		}
 		else
 		{
-			$_SESSION['errors'] = "Incorrect login data, try again";
+			$_SESSION['login_errors'] = "Incorrect login data, try again";
 			header("Location: login.php");
 		}
 	}
 	else
 	{
-		$_SESSION['errors'] = "Incorrect login data, try again";
+		$_SESSION['login_errors'] = "Incorrect login data, try again";
 			header("Location: login.php");
 	}
 }

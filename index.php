@@ -1,5 +1,10 @@
 <?php
 session_start();
+if(!isset($_SESSION['current_user']))
+{
+	$_SESSION['login_errors'] = "You must log in to view the wall.";
+	header('Location: login.php');
+}
 require_once('connection.php');
 $query = "SELECT users.first_name, users.last_name, messages.id as 'msg_id', messages.created_at, messages.message FROM messages LEFT JOIN users ON messages.user_id = users.id";
 $messages = fetch_all($query);

@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(isset($_SESSION['errors']))
+if(isset($_SESSION['login_errors']))
 {
 ?>
 
@@ -10,10 +10,10 @@ if(isset($_SESSION['errors']))
 	<title>Login or Register</title>
 </head>
 <body>
-<?= $_SESSION['errors'] ?>
+<?= $_SESSION['login_errors'] ?>
 
 <?php
-$_SESSION['errors']= "";
+$_SESSION['login_errors']= "";
 }
 ?>
 <h3>Register</h3>
